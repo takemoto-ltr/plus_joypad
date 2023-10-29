@@ -50,7 +50,7 @@ void *threadfunc(void *pdata)
       }
       else {
 			char buff[256];
-			sprintf(buff, "###,%3d,%3d,%03d,%03d\r", pcontroller->m_l, pcontroller->m_r, 0, 0);
+			sprintf(buff, "###,%3d,%3d,%03d,%03d\r", pcontroller->m_r, pcontroller->m_l, 0, 0);
 			if (send(sockClient, buff, ((int)strlen(buff) + 0), 0) < 0) {
 				// 送信エラー
 				break;
